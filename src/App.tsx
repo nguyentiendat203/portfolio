@@ -93,7 +93,7 @@ function Portfolio() {
       <aside className={`w-64 bg-[#4fada9] shadow-lg h-full fixed top-0 left-0 z-40 hidden md:block`}>
         <div className='h-full flex flex-col justify-center'>
           <div>
-            <img src={Avatar} alt='Profile' className='w-48 h-48 rounded-full object-cover shadow-lg m-auto' />
+            <img src={Avatar} alt='Profile' className='w-48 h-48 rounded-full object-contain bg-white shadow-lg m-auto' />
           </div>
           <nav className='space-y-2'>
             {sections.map(({ id, icon: Icon, label }) => (
@@ -131,7 +131,7 @@ function Portfolio() {
             <Element name='about' className='md:max-w-5xl space-y-8 min-h-screen flex flex-col justify-center'>
               <div>
                 <div className='py-5 md:hidden'>
-                  <img src={Avatar} alt='Profile' className='w-48 h-48 rounded-full object-cover shadow-lg m-auto' />
+                  <img src={Avatar} alt='Profile' className='w-56 h-56 rounded-full object-contain shadow-lg m-auto bg-white' />
                 </div>
                 <div className='md:hidden flex flex-col items-center justify-between'>
                   <h1 className='text-3xl font-bold mb-4 text-gray-700'>NGUYEN TIEN DAT</h1>
