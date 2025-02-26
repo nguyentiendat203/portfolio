@@ -140,7 +140,7 @@ function Portfolio() {
                     <a href='https://www.facebook.com/profile.php?id=100022670015322' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
                       <FaFacebook size={30} className='text-[#455ffe]' />
                     </a>
-                    <a href='https://github.com/NguyenDat-2003' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
+                    <a href='https://github.com/nguyentiendat203' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
                       <FaGithub size={30} className='text-black' />
                     </a>
                     <a href='mailto:nguyendat203.work@gmail.com' className='text-gray-600 hover:text-blue-600 transition-colors'>
@@ -155,7 +155,7 @@ function Portfolio() {
                     <a href='https://www.facebook.com/profile.php?id=100022670015322' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
                       <FaFacebook size={30} className='text-[#455ffe]' />
                     </a>
-                    <a href='https://github.com/NguyenDat-2003' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
+                    <a href='https://github.com/nguyentiendat203' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
                       <FaGithub size={30} className='text-black' />
                     </a>
                     <a href='mailto:nguyendat203.work@gmail.com' className='text-gray-600 hover:text-blue-600 transition-colors'>
@@ -195,6 +195,58 @@ function Portfolio() {
               <div className='mb-8'>
                 <div className='flex flex-col md:flex-row justify-between'>
                   <a
+                    href='https://github.com/nguyentiendat203/full-stack-blog-app'
+                    target='_blank'
+                    className='text-2xl font-bold text-[#4fada9] flex items-center hover:underline hover:text-orange-400'
+                  >
+                    News Website <FaExternalLinkAlt className='ml-1' />
+                  </a>
+                  <span className='text-teal-500 font-medium my-3 md:m-0'>02/2025 - Present</span>
+                </div>
+                <p className='text-xl font-semibold text-gray-600 mb-4 '>Full-stack</p>
+                <ul className='list-none text-lg pl-2 md:pl-5 mt-2 space-y-1'>
+                  <li className='flex gap-1'>
+                    <FaBookmark className='mt-2 text-yellow-500' size={14} />
+                    <span className='flex-1'>
+                      Frontend technologies:
+                      <strong>Javascript, ReactJS ,Tailwind CSS</strong>
+                    </span>
+                  </li>
+                  <li className='flex gap-1'>
+                    <FaBookmark className='mt-2 text-yellow-500' size={14} />
+                    <span className='flex-1'>
+                      Backend technologies:
+                      <strong>Python, Django REST framework, working with SQLite.</strong>
+                    </span>
+                  </li>
+                  <li className='flex gap-1'>
+                    <FaBookmark className='mt-2 text-yellow-500' size={14} />
+                    <span className='flex-1'>Perform CRUD operations on news articles, news categories, and user management.</span>
+                  </li>
+                  <li className='flex gap-1'>
+                    <FaBookmark className='mt-2 text-yellow-500' size={14} />
+                    <span className='flex-1'>Implementing search, pagination, and news filtering functions.</span>
+                  </li>
+                  <li className='flex gap-1'>
+                    <FaBookmark className='mt-2 text-yellow-500' size={14} />
+                    <span className='flex-1'>Register login, authenticate user.</span>
+                  </li>
+                  <li className='flex gap-1'>
+                    <FaBookmark className='mt-2 text-yellow-500' size={14} />
+                    <span className='flex-1'>Use django-cors-headers, drf-jwt to generate access token, refresh token.</span>
+                  </li>
+                  <li className='flex items-center gap-1'>
+                    <FaGithub size={16} className='text-black' />
+                    <strong>Github:</strong>
+                    <a target='_blank' className='text-[#4fada9] underline font-bold' href='https://github.com/nguyentiendat203/full-stack-blog-app'>
+                      Full-stack news website
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div className='mb-8'>
+                <div className='flex flex-col md:flex-row justify-between'>
+                  <a
                     href='https://banker-algorithm-simulator.vercel.app/'
                     target='_blank'
                     className='text-2xl font-bold text-[#4fada9] flex items-center hover:underline hover:text-orange-400'
@@ -223,7 +275,7 @@ function Portfolio() {
                   <li className='flex items-center gap-1'>
                     <FaGithub size={16} className='text-black' />
                     <strong>Github:</strong>
-                    <a className='text-[#4fada9] underline font-bold' target='_blank' href='https://github.com/NguyenDat-2003/banker-algorithm-simulator'>
+                    <a className='text-[#4fada9] underline font-bold' target='_blank' href='https://github.com/nguyentiendat203/banker-algorithm-simulator'>
                       Banker-algorithm-simulator
                     </a>
                   </li>
@@ -268,10 +320,10 @@ function Portfolio() {
                   <li className='flex items-center gap-1'>
                     <FaGithub size={16} className='text-black' />
                     <strong>Github:</strong>
-                    <a className='text-[#4fada9] underline font-bold' href='https://github.com/NguyenDat-2003/book-store-frontend'>
+                    <a className='text-[#4fada9] underline font-bold' href='https://github.com/nguyentiendat203/book-store-frontend'>
                       Front-end,
                     </a>
-                    <a className='text-[#4fada9] underline font-bold ml-2' href='https://github.com/NguyenDat-2003/book-store-backend'>
+                    <a className='text-[#4fada9] underline font-bold ml-2' href='https://github.com/nguyentiendat203/book-store-backend'>
                       Back-end
                     </a>
                   </li>
