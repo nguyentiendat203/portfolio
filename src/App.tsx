@@ -1,11 +1,7 @@
-import { useEffect, useState } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import { Link as ScrollLink, Element, scroller, Events } from 'react-scroll'
-import { FiBookOpen } from 'react-icons/fi'
-import { IoBriefcaseOutline } from 'react-icons/io5'
-import { LuFileCode2 } from 'react-icons/lu'
-import { PiGraduationCap } from 'react-icons/pi'
-import { FaCss3Alt, FaExternalLinkAlt, FaHtml5, FaJs, FaNodeJs, FaRegHeart } from 'react-icons/fa'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Element } from 'react-scroll'
+
+import { FaCss3Alt, FaExternalLinkAlt, FaHtml5, FaJs, FaNodeJs } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
 import { IoMailOutline } from 'react-icons/io5'
 import { FaFacebook } from 'react-icons/fa'
@@ -16,112 +12,14 @@ import { SiDjango } from 'react-icons/si'
 
 import PythonLogo from '../public/python.png'
 import Avatar from '../public/avatar.jpg'
-
-const sections = [
-  { id: 'about', icon: FiBookOpen, label: 'About Me' },
-  { id: 'experience', icon: IoBriefcaseOutline, label: 'Experience' },
-  { id: 'skills', icon: LuFileCode2, label: 'Skills' },
-  { id: 'education', icon: PiGraduationCap, label: 'Education' },
-  { id: 'interests', icon: FaRegHeart, label: 'Interests' }
-]
+import Score from '../public/score.jpg'
+import { SideBar } from './SideBar'
 
 function Portfolio() {
-  const [activeSection, setActiveSection] = useState('about')
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-  const location = useLocation()
-
-  useEffect(() => {
-    Events.scrollEvent.register('begin', () => {})
-    Events.scrollEvent.register('end', () => {})
-
-    const sectionId = location.hash.replace('#', '') || 'about'
-    setActiveSection(sectionId)
-    scroller.scrollTo(sectionId, {
-      duration: 600,
-      delay: 0,
-      smooth: 'easeInOutQuart',
-      offset: -100
-    })
-
-    return () => {
-      Events.scrollEvent.remove('begin')
-      Events.scrollEvent.remove('end')
-    }
-  }, [location])
-
   return (
     <div className='min-h-screen bg-gray-50 flex flex-col'>
       {/* Navbar - Mobile and Desktop */}
-      <div className='md:hidden p-4 bg-[#4fada9] text-white fixed top-0 left-0 right-0 z-50'>
-        <div className='flex justify-between items-center'>
-          <span className='text-lg uppercase font-semibold text-gray-700'>NGUYEN TIEN DAT</span>
-          <button className='text-white text-2xl' onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-            ☰
-          </button>
-        </div>
-
-        <div className={`md:hidden absolute top-full left-0 w-full bg-[#4fada9] shadow-lg z-40  ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-          <nav className='space-y-2'>
-            {sections.map(({ id, icon: Icon, label }) => (
-              <ScrollLink
-                key={id}
-                to={id}
-                spy={true}
-                smooth={true}
-                duration={800}
-                offset={-100}
-                activeClass='active'
-                onSetActive={() => setActiveSection(id)}
-                className='cursor-pointer'
-              >
-                <button
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className={`w-full flex items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
-                    activeSection === id ? 'text-white font-bold' : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  <Icon size={20} />
-                  <span className='uppercase font-semibold'>{label}</span>
-                </button>
-              </ScrollLink>
-            ))}
-          </nav>
-        </div>
-      </div>
-
-      {/* Left Sidebar (Nav) */}
-      <aside className={`w-64 bg-[#4fada9] shadow-lg h-full fixed top-0 left-0 z-40 hidden md:block`}>
-        <div className='h-full flex flex-col justify-center'>
-          <div>
-            <img src={Avatar} alt='Profile' className='w-48 h-48 rounded-full object-contain bg-white shadow-lg m-auto' />
-          </div>
-          <nav className='space-y-2'>
-            {sections.map(({ id, icon: Icon, label }) => (
-              <ScrollLink
-                key={id}
-                to={id}
-                spy={true}
-                smooth={true}
-                duration={800}
-                offset={-100}
-                activeClass='active'
-                onSetActive={() => setActiveSection(id)}
-                className='cursor-pointer'
-              >
-                <button
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                  className={`w-full flex justify-center items-center space-x-3 px-4 py-3 rounded-lg transition-colors ${
-                    activeSection === id ? 'text-white font-bold' : 'text-gray-300 hover:text-white'
-                  }`}
-                >
-                  <Icon size={20} />
-                  <span className='uppercase font-semibold'>{label}</span>
-                </button>
-              </ScrollLink>
-            ))}
-          </nav>
-        </div>
-      </aside>
+      <SideBar />
 
       {/* Main Content */}
       <main className='flex-1 p-6 mt-[64px] md:mt-0 md:ml-64'>
@@ -399,6 +297,34 @@ function Portfolio() {
                     </span>
                   </li>
                 </ul>
+              </div>
+            </Element>
+          </div>
+          {/* Certificates Section */}
+          <div className='border-b-2 py-4'>
+            <Element name='certificates' className='max-w-5xl space-y-8 min-h-screen flex flex-col justify-center'>
+              <h2 className='text-4xl font-bold mb-6 md:mb-8 flex items-center'>Certificates</h2>
+              <p className='flex flex-col md:flex-row justify-between'>
+                <div className='text-2xl font-bold text-[#4fada9] flex items-center'>TOEIC - Test of English for International Communication</div>
+                <span className='text-teal-500 font-medium my-3 md:m-0'>2025 - 2027</span>
+              </p>
+
+              <p className='text-gray-600'>Score: 675/990</p>
+              <ul className='mt-3 space-y-2'>
+                <li className='flex items-center gap-2'>
+                  <span className='w-1.5 h-1.5 bg-teal-500 rounded-full'></span>
+                  <span>Listening: 390/495</span>
+                </li>
+                <li className='flex items-center gap-2'>
+                  <span className='w-1.5 h-1.5 bg-teal-500 rounded-full'></span>
+                  <span>Reading: 285/495</span>
+                </li>
+              </ul>
+
+              <div className='mt-4'>
+                <div className='mt-4'>
+                  <img src={Score} alt='TOEIC Certificate' className='w-full rounded-lg shadow-sm' />
+                </div>
               </div>
             </Element>
           </div>
