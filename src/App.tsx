@@ -48,7 +48,7 @@ function Portfolio() {
                 </div>
                 <div className='hidden md:block'>
                   <h1 className='text-4xl font-bold mb-4 text-gray-700'>NGUYEN TIEN DAT</h1>
-                  <p className='text-xl text-gray-600 mb-4'>Intern Back-end Developer</p>
+                  <p className='text-xl text-gray-600 mb-4'>FullStack Developer Intern</p>
                   <div className='flex space-x-4'>
                     <a href='https://www.facebook.com/profile.php?id=100022670015322' target='_blank' className='text-gray-600 hover:text-blue-600 transition-colors'>
                       <FaFacebook size={30} className='text-[#455ffe]' />
