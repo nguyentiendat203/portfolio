@@ -181,7 +181,11 @@ function Portfolio() {
               </div>
               <div className='mb-8'>
                 <div className='flex flex-col md:flex-row justify-between'>
-                  <a href='#' className='text-2xl font-bold text-[#4fada9] flex items-center hover:underline hover:text-orange-400'>
+                  <a
+                    target='_blank'
+                    href='https://github.com/nguyentiendat203/full-stack-book-store'
+                    className='text-2xl font-bold text-[#4fada9] flex items-center hover:underline hover:text-orange-400'
+                  >
                     Book Store <FaExternalLinkAlt className='ml-1' />
                   </a>
                   <span className='text-teal-500 font-medium my-3 md:m-0'>07/2024 - 10/2024</span>
@@ -218,11 +222,8 @@ function Portfolio() {
                   <li className='flex items-center gap-1'>
                     <FaGithub size={16} className='text-black' />
                     <strong>Github:</strong>
-                    <a className='text-[#4fada9] underline font-bold' href='https://github.com/nguyentiendat203/book-store-frontend'>
-                      Front-end,
-                    </a>
-                    <a className='text-[#4fada9] underline font-bold ml-2' href='https://github.com/nguyentiendat203/book-store-backend'>
-                      Back-end
+                    <a className='text-[#4fada9] underline font-bold' target='_blank' href='https://github.com/nguyentiendat203/full-stack-book-store'>
+                      Full-stack book store
                     </a>
                   </li>
                 </ul>
